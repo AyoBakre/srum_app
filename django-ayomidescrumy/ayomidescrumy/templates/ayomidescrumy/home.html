@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+</head>
+
+<body>
+<a href="{% url 'ayomidescrumy:addgoal' %}">Home</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Users</th>
+                <th>Weekly Goals</th>
+                <th>Daily Goals</th>
+                <th>Verify Goals</th>
+                <th>Done Goals</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for obj in my_users %}
+                <td>{{obj}}</td>
+                {% for goal in obj.user.all %}
+                {%if goal.goal_status.status_name == 'Weekly Goal'%}
+                <td></td>
+                <td>{{goal.goal_id}} {{goal.goal_name}}</td>
+                <td></td>
+                <td></td>
+                {%elif goal.goal_status.status_name == 'Daily Goal'%}
+                <td> </td>
+                <td>{{goal.goal_id}} {{goal.goal_name}}</td>
+                <td></td>
+                <td></td>
+                {%elif goal.goal_status.status_name == 'Verify Goal'%}
+                <td></td>
+                <td></td>
+                <td>{{goal.goal_id}} {{goal.goal_name}}</td>
+                <td></td>
+                {%else%}
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{goal.goal_id}} {{goal.goal_name}}</td>
+                {%endif%}
+            </tr>
+            {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>

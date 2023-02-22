@@ -1,0 +1,32 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>Goal</title>
+</head>
+<body>
+    <div class="container">
+        {% if request.user.is_authenticated %}
+		<a style="float: right;" href="/ayomidescrumy/accounts/logout" class="btn btn-primary m-3">Log Out</a>
+		{%else%}
+		<a style="float: right;" href="/ayomidescrumy/accounts/login" class="btn btn-primary m-3">Log IN</a>
+		{% endif %}
+        <p class="badge badge-danger m-3"> {{request.user.username}} is logged in </p>
+		<p class="badge badge-danger m-3">Group: {{request.user.groups.all.0}}</p>
+		
+        <h1>Add Goal</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <span>Goal would be created for {{request.user.username}} in {{goal_status}}</span><br>
+                <button type="submit" class="btn btn-primary mt-3">Add Goal</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

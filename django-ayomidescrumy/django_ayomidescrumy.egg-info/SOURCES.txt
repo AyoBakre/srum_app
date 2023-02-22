@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+ayomidescrumy/__init__.py
+ayomidescrumy/admin.py
+ayomidescrumy/apps.py
+ayomidescrumy/forms.py
+ayomidescrumy/models.py
+ayomidescrumy/tests.py
+ayomidescrumy/urls.py
+ayomidescrumy/views.py
+ayomidescrumy/migrations/__init__.py
+django_ayomidescrumy.egg-info/PKG-INFO
+django_ayomidescrumy.egg-info/SOURCES.txt
+django_ayomidescrumy.egg-info/dependency_links.txt
+django_ayomidescrumy.egg-info/top_level.txt

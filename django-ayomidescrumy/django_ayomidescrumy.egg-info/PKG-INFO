@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: django-ayomidescrumy
+Version: 0.1
+Summary: A simple Django app that returns 'welcome to django'
+Home-page: http://3.143.112.43:8000/ayomidescrumy/
+Author: Ayomide Bakre
+Author-email: ayomidebakre@gmail.com
+License: BSD License
+Description: ====
+        ayomidescrumy
+        ====
+        
+        Ayomidescrumy is a simple Django app that returns "Welcome to Django"
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: X.Y
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python ::3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WW/HTTP
+Classifier: Topic :: Internet :: WW/HTTP :: Dynamic Content

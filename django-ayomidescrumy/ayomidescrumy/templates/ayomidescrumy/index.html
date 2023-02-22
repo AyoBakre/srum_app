@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+
+
+<body>
+    <a href="{% url 'ayomidescrumy:home' %}">Home</a>
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button>Sign up</button>
+    </form>
+
+</body>
+</html>
